@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's the Weather?</title>
+    <link rel="icon" type="image/x-icon" href="/Source Files/wtw_favicon.svg">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="wtw_logo">
+        <img src="/Source Files/wtw_title_logo.svg" alt="WTW_Logo">
+        <img id="mode" src="/Source Files/Weather SVG/dark_mode.svg" alt="dark_mode">
+    </div>
+    <p class="powered_by">Powered By Open Weather API</p>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter the city name" spellcheck="false">
+            <button><img src="/Source Files/wtw_search_icon.svg"></button>
+        </div>
+        <div class="error">
+            <p>Please enter a valid city name.</p>
+        </div>
+        <div class="weather">
+            <div class="city_speak">
+                <h2 class="city">Dwarahat</h2>
+            </div>
+            <div class="coord">
+                <img class="coordinates" src="./Source Files/Weather SVG/coordinates.svg" alt="coordinates_icon">&nbsp;
+                <p class="coordinates_data">52.65115,45.2653</p> &nbsp;&nbsp;
+                <button id="speechButton"> ▶︎ </button>
+            </div>
+            <img class="weather_icon" src="/Source Files/Weather SVG/clear.svg" alt="weather_icon">
+            <h1 class="temp">12°C</h1>
+            <h3 class="description">Sunny</h3>
+            <br>
+            <hr>
+            <div class="details">
+                <div class="col">
+                    <p>Humidity</p>
+                    <img src="/Source Files/Weather SVG/humidity.svg">
+                    <div>
+                        <p class="humidity">50%</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <p>Visibility</p>
+                    <img src="/Source Files/Weather SVG/visibility.svg">
+                    <div>
+                        <p class="visibility">20km/h</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <p>&nbsp;&nbsp;&nbsp;Wind</p>
+                    <img src="/Source Files/Weather SVG/wind.svg">
+                    <div>
+                        <p class="wind">15 km/h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>Copyright © 2023, By Varun Pandey</footer>
+    <br>
+    <script src="/app.js"></script>
+</body>
+
+</html>

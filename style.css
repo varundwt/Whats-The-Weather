@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: url("/Source\ Files/light.jpg");
+  --body-color: white;
+  --card-background: radial-gradient(#ffffff 40%, #A4DEF9);
+  --card-color: black;
+  --search-input-background: #dcf4ff;
+  --search-input-color: rgb(0, 0, 0);
+  --search-button-background: #dcf4ff;
+  --speech-button-color: black;
+  --weather-color: black;
+  --footer-color: rgb(255, 255, 255);
+  --powered-by: black;
+  --text-shadow: 2px 2px 4px #898888;
+  --speech-button-color: white;
+}
+
+.dark-theme {
+  --background: url("Source\ Files/dark.jpg");
+  --body-color: black;
+  --card-background: radial-gradient(#27409a 20%, #321440);
+  --card-color: white;
+  --search-input-background: #1b1440;
+  --search-input-color: rgb(255, 255, 255);
+  --search-button-background: #7268a6;
+  --speech-button-color: white;
+  --weather-color: white;
+  --footer-color: white;
+  --powered-by: rgb(255, 255, 255);
+  --text-shadow: 2px 2px 4px #5e2323;
+  --speech-button-color: rgb(0, 0, 0);
+}
+
+body {
+  background-image: var(--background);
+  background-size: 400% 400%;
+  animation: gradient 60s ease infinite;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: var(--body-color);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.card {
+  width: 90%;
+  max-width: 470px;
+  background: var(--card-background);
+  color: var(--card-color);
+  margin: 0px auto 0;
+  border-radius: 20px;
+  padding: 40px 35px;
+  animation: fadeInAnimation linear 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  box-shadow: var(--text-shadow);
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search input {
+  border: 0;
+  outline: 0;
+  background: var(--search-input-background);
+  color: var(--search-input-color);
+  padding: 10px 25px;
+  height: 60px;
+  border-radius: 30px;
+  flex: 1;
+  margin-right: 16px;
+  font-size: 18px;
+  box-shadow: var(--text-shadow);
+}
+
+.search button {
+  outline: 30px;
+  background: var(--search-button-background);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+
+.city {
+  margin-left: 15px;
+}
+
+.powered_by {
+  text-shadow: var(--text-shadow);
+}
+
+.coord {
+  width: 15px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-left: 15px;
+  margin-top: 6px;
+}
+
+.powered_by {
+  position: relative;
+  margin-left: 180px;
+  margin-top: -45px;
+  margin-bottom: 10px;
+  color: var(--powered-by);
+}
+
+.speechButton {
+  background-color: var(--speech-button-color);
+}
+
+.weather button {
+  cursor: pointer;
+  color: var(--weather-color);
+}
+
+.coordinates_data {
+  font-size: 16px;
+  margin-left: 2px;
+}
+
+#speechButton {
+  margin-left: 5px;
+  color: var(--speech-button-color);
+}
+
+.search button img {
+  width: 16px;
+}
+
+.wtw_logo {
+  border-radius: 20px;
+  padding: 40px 35px;
+  margin-bottom: -25px;
+  margin-top: -25px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  border-radius: 20px;
+}
+
+
+.weather_icon {
+  width: 200px;
+  margin-top: -10px;
+  margin-left: 100px;
+
+}
+
+.weather h1 {
+  margin-top: -20px;
+  font-size: 70px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.weather h2,
+#speechbutton {
+  font-size: 45px;
+  font-weight: 400;
+  margin-top: 40px;
+  align-items: center;
+  display: grid;
+}
+
+.details {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+col {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.col img {
+  width: 45px;
+  margin-right: 1px;
+  margin-left: 10px;
+}
+
+.humidity,
+.wind,
+.visibility {
+  font-size: 15px;
+  margin-top: -2px;
+  text-align: center
+}
+
+.weather {
+  display: none;
+}
+
+.error {
+  text-align: left;
+  margin-left: 10px;
+  font-size: 14px;
+  margin-top: 10px;
+  display: none;
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 25px;
+  text-align: center;
+}
+
+#mode {
+  width: 20px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  margin-top: 15px;
+  color: var(--footer-color);
+  text-shadow: var(--text-shadow);
+}
